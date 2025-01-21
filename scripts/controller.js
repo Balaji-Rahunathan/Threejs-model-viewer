@@ -82,7 +82,7 @@ function init() {
     }
   );
 
-  //cruz text loader
+  //Keeladi text loader
   const fontloader = new FontLoader();
   fontloader.load('/assets/fonts/Montserrat_Bold.json', function (font) {
     const geometry = new TextGeometry('KEELADI', {
