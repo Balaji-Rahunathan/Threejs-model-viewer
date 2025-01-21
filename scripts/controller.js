@@ -84,7 +84,7 @@ function init() {
 
   //cruz text loader
   const fontloader = new FontLoader();
-  fontloader.load('../assets/fonts/Gilroy-Bold.json', function (font) {
+  fontloader.load('/assets/fonts/Montserrat_Bold.json', function (font) {
     const geometry = new TextGeometry('KEELADI', {
       font: font,
       size: 80,
@@ -103,7 +103,7 @@ function init() {
     material.transparent = true
     material.opacity = 0.06
     let textMesh = new THREE.Mesh(geometry, material);
-    textMesh.position.set(-100, 80, -200);
+    textMesh.position.set(-150, 80, -200);
     scene.add(textMesh);
   });
 
