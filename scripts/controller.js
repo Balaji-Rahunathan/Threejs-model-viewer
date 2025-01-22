@@ -46,26 +46,14 @@ function init() {
 
   //cycle modal loader
   var gltfloader = new GLTFLoader();
-  gltfloader.load('./assets/models/stone.glb',
+  gltfloader.load('./assets/models/pot.glb',
     function (gltf) {
       window.objects = gltf.scene;
-      gltf.scene.scale.set(200,200, 200);
+      gltf.scene.scale.set(500,500,500);
       gltf.scene.position.set(0, 53, 0);
       gltf.scene.autorotation = true;
       // gltf.scene.castShadow = true;
-      objectsHelper(gltf.scene.children)
-    //   console.log(gltf.scene)
-    //   console.log(gltf.scene.children[2].material.color)
-
-
-      //frame properties
-    //   gltf.scene.children[2].material.roughness = 0.3;
-    //   gltf.scene.children[2].material.metalness = 1.0;
-    //   gltf.scene.children[2].material.reflectivity = 1.0;
-    //   gltf.scene.children[30].material.color = new THREE.Color(0xff00cc)
-    //   gltf.scene.children[2].material.clearcoat = 1.0
-    //   gltf.scene.children[2].material.clearcoatRoughness = 1.0
-    //   gltf.scene.children[2].material.envMap = frameTexture
+      // objectsHelper(gltf.scene.children)
 
       group.add(gltf.scene);
       console.log(gltf.scene)
@@ -84,7 +72,7 @@ function init() {
 
   //Keeladi text loader
   const fontloader = new FontLoader();
-  fontloader.load('./assets/fonts/Montserrat_Bold.json', function (font) {
+  fontloader.load('./assets/fonts/Poppins_Bold.json', function (font) {
     const geometry = new TextGeometry('KEELADI', {
       font: font,
       size: 80,
@@ -103,7 +91,7 @@ function init() {
     material.transparent = true
     material.opacity = 0.06
     let textMesh = new THREE.Mesh(geometry, material);
-    textMesh.position.set(-150, 80, -200);
+    textMesh.position.set(-120, 80, -200);
     scene.add(textMesh);
   });
 
